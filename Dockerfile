@@ -1,6 +1,8 @@
 # start based on a centos image
 FROM rhel7
 
+ADD open_ocp-ha-lab.repo /etc/yum.repos.d/
+
 RUN yum -y install gettext nss_wrapper iproute bc && yum clean all
 
 ENV HOME=/opt/app-root/src \
