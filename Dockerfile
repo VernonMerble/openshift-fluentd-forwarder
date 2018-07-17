@@ -3,7 +3,7 @@ FROM rhel7
 
 ADD open_ocp-ha-lab.repo /etc/yum.repos.d/
 
-RUN yum -y install gettext nss_wrapper iproute bc && yum clean all
+RUN yum -y install gettext nss_wrapper iproute bc rubygems && yum clean all
 
 ENV HOME=/opt/app-root/src \
   PATH=/opt/rh/rh-ruby22/root/usr/bin:/opt/app-root/src/bin:/opt/app-root/bin${PATH:+:${PATH}} \
