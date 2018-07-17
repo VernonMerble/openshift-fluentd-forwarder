@@ -1,0 +1,1 @@
+RUN yum -y install gettext nss_wrapper iproute bc && yum clean all

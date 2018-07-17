@@ -1,8 +1,6 @@
 # start based on a centos image
 FROM rhel7
 
-RUN yum -y install gettext nss_wrapper iproute bc && yum clean all
-
 ENV HOME=/opt/app-root/src \
   PATH=/opt/rh/rh-ruby22/root/usr/bin:/opt/app-root/src/bin:/opt/app-root/bin${PATH:+:${PATH}} \
   LD_LIBRARY_PATH=/opt/rh/rh-ruby22/root/usr/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}} \
