@@ -1,5 +1,7 @@
 #!/bin/bash
 
+touch /sentinel.1
+
 # get release version
 RELEASE=$(cat /etc/redhat-release)
 YUM_ARGS="--setopt=tsflags=nodocs"
@@ -77,3 +79,5 @@ chgrp -R 0 /secrets
 chmod -R g+rwX /secrets
 chgrp -R 0 /var/log
 chmod -R g+rwX /var/log
+
+touch /sentinel.2

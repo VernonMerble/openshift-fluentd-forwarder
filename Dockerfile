@@ -43,8 +43,10 @@ RUN chmod g+rx ${HOME}/fluentd-check.sh && \
     chmod +x /tmp/common-*.sh
 
 # execute files and remove when done
+COPY /dev/null /sentinel.outer.1
 RUN /tmp/common-install.sh && \
     rm -f /tmp/common-*.sh
+COPY /dev/null /sentinel.outer.2
 
 # set working dir
 WORKDIR ${HOME}
